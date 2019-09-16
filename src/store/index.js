@@ -8,11 +8,12 @@ const sagaMonitor =
   process.env.NODE_ENV === 'development'
     ? console.tron.createSagaMonitor()
     : null;
+
 const sagaMiddleware = createSagaMiddleware({ sagaMonitor });
 
-const middleware = [sagaMiddleware];
+const middlewares = [sagaMiddleware];
 
-const store = createStore(rootReducer, middleware);
+const store = createStore(rootReducer, middlewares);
 
 sagaMiddleware.run(rootSaga);
 
