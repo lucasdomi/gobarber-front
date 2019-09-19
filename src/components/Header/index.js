@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Container, Content, Profile } from './styles';
 import logo from '~/assets/logo-roxa.svg';
+import Notifications from '~/components/Notifications';
 
 export default function Header() {
   return (
@@ -14,6 +15,7 @@ export default function Header() {
         </nav>
 
         <aside>
+          <Notifications />
           <Profile>
             <div>
               <strong>Lucas Domingues</strong>
